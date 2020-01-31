@@ -67,7 +67,7 @@ CREATE TABLE `cities` (
   `name` varchar(45) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`city_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -76,6 +76,7 @@ CREATE TABLE `cities` (
 
 LOCK TABLES `cities` WRITE;
 /*!40000 ALTER TABLE `cities` DISABLE KEYS */;
+INSERT INTO `cities` VALUES (1,'New York','2020-01-31 17:32:01'),(2,'Boston','2020-01-31 17:32:02'),(3,'Philadelphia','2020-01-31 17:32:02'),(4,'Washington DC','2020-01-31 17:32:02'),(5,'Chicago','2020-01-31 17:32:02'),(6,'Germantown','2020-01-31 17:32:02'),(7,'Charlottesville','2020-01-31 17:32:02');
 /*!40000 ALTER TABLE `cities` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -91,8 +92,9 @@ CREATE TABLE `disciplines` (
   `name` varchar(45) NOT NULL,
   `description` varchar(1000) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `url` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`discipline_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -101,6 +103,7 @@ CREATE TABLE `disciplines` (
 
 LOCK TABLES `disciplines` WRITE;
 /*!40000 ALTER TABLE `disciplines` DISABLE KEYS */;
+INSERT INTO `disciplines` VALUES (1,'Judo','Judo (柔道, jūdō, Japanese pronunciation: [dʑɯꜜːdoː], lit. \"gentle way\") is generally categorized as a modern martial art, which has since evolved into a combat and Olympic sport. The sport was originally created in 1882 by Jigoro Kano (嘉納治五郎) as a physical, mental, and moral pedagogy in Japan. Judo\'s most prominent feature is its competitive element, where the objective is to either throw or take down an opponent to the ground, immobilize or otherwise subdue an opponent with a pin, or force an opponent to submit with a joint lock or a choke. Strikes and thrusts by hands and feet as well as weapons defences are a part of judo, but only in pre-arranged forms (kata, 形) and are not allowed in judo competition or free practice (randori, 乱取り). A judo practitioner is called a judoka. ','2020-01-31 17:53:34','https://judoinfo.com/'),(2,'Judo','Judo (柔道, jūdō, Japanese pronunciation: [dʑɯꜜːdoː], lit. \"gentle way\") is generally categorized as a modern martial art, which has since evolved into a combat and Olympic sport. The sport was originally created in 1882 by Jigoro Kano (嘉納治五郎) as a physical, mental, and moral pedagogy in Japan. Judo\'s most prominent feature is its competitive element, where the objective is to either throw or take down an opponent to the ground, immobilize or otherwise subdue an opponent with a pin, or force an opponent to submit with a joint lock or a choke. Strikes and thrusts by hands and feet as well as weapons defences are a part of judo, but only in pre-arranged forms (kata, 形) and are not allowed in judo competition or free practice (randori, 乱取り). A judo practitioner is called a judoka. ','2020-01-31 17:56:10','https://judoinfo.com/'),(3,'Brazilian Jiujitsu','Brazilian jiu-jitsu (/dʒuːˈdʒɪtsuː/; Portuguese: [ˈʒiw ˈʒit(i)su], [ˈʒu ˈʒit(i)su], [dʒiˈu dʒit(i)ˈsu]) (BJJ; Portuguese: jiu-jitsu brasileiro) is a self-defense system, martial art and combat sport system that focuses on grappling with particular emphasis on ground fighting. Brazilian jiu-jitsu was developed from Kodokan judo ground fighting (newaza) fundamentals that were taught by a number of Japanese individuals including Takeo Yano, Mitsuyo Maeda, Soshihiro Satake, and Isao Okano. Brazilian jiu-jitsu eventually came to be its own defined combat sport through the innovations, practices, and adaptation of judo.','2020-01-31 17:56:10','https://www.bjjheroes.com/bjj-news/brazilian-jiu-jitsu'),(4,'Sambo','Sambo (Russian: са́мбо, IPA: [ˈsambə]; самозащита без оружия) is a Soviet martial art and combat sport. It originated in the Russian SFSR in Soviet Union. The word \"SAMBO\" is an acronym of samozashchita bez oruzhiya, which literally translates as \"self-defence without weapons\". Sambo is relatively modern, since its development began in the early 1920s by the Soviet NKVD and Red Army to improve hand-to-hand combat abilities of the servicemen. It was intended to be a merger of the most effective techniques of other martial arts.','2020-01-31 17:56:10','https://en.wikipedia.org/wiki/Sambo_(martial_art)'),(5,'Greco-Roman Wrestling ','Greco-Roman (US), Graeco-Roman (UK) or classic wrestling (Europe)[2] is a style of wrestling that is practiced worldwide. It was contested at the first modern Olympic Games in 1896 and has been included in every edition of the summer Olympics held since 1904. This style of wrestling forbids holds below the waist; this is the major difference from freestyle wrestling, the other form of wrestling at the Olympics. This restriction results in an emphasis on throws because a wrestler cannot use trips to take an opponent to the ground, or avoid throws by hooking or grabbing the opponent\'s leg.\nAccording to United World Wrestling, Greco-Roman wrestling is one of the six main forms of amateur competitive wrestling practised internationally today. The other five forms are freestyle wrestling, grappling/submission wrestling, beach wrestling, pankration athlima, alysh/belt wrestling and traditional/folk wrestling.','2020-01-31 17:56:10','https://en.wikipedia.org/wiki/Greco-Roman_wrestling'),(6,'Freestlye Wrestling','Freestyle wrestling is a style of amateur wrestling that is practiced throughout the world. Along with Greco-Roman, it is one of the two styles of wrestling contested in the Olympic games. American high school and college wrestling is conducted under different rules and is termed scholastic and collegiate wrestling.\n\nFreestyle wrestling, like collegiate wrestling, has its greatest origins in catch-as-catch-can wrestling. In both styles the ultimate goal is to throw and pin the opponent to the mat, which results in an immediate win. Unlike Greco-Roman, freestyle and collegiate wrestling allow the use of the wrestler\'s or the opponent\'s legs in offense and defense. Freestyle wrestling brings together traditional wrestling, judo, and sambo techniques.','2020-01-31 17:56:10','https://en.wikipedia.org/wiki/Freestyle_wrestling'),(7,'Shuai Jiao','Shuai Jiao (Chinese: 摔跤 or 摔角; pinyin: Shuāijiāo; Wade–Giles: Shuai-chiao) is the term pertaining to the ancient jacket wrestling wushu style of Beijing, Tianjin and Baoding of Hebei Province in the North China Plain which was codified by Shan Pu Ying (善撲营 The Battalion of Excellency in Catching) of the Nei Wu Fu (内務府, Internal Administration Unit of Imperial Household Department). In modern usage it is also the general Mandarin Chinese term for any form of wrestling, both inside and outside China. As a generic name, it may be used to cover various styles of wrestling practised in China in the form of a martial arts system or a sport. The art was introduced to Southern China in the Republican era (see Republic of China (1912–1949)) after 1911.','2020-01-31 17:56:10','https://en.wikipedia.org/wiki/Shuai_jiao');
 /*!40000 ALTER TABLE `disciplines` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -254,7 +257,7 @@ CREATE TABLE `state` (
   `name` varchar(45) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`state_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -263,6 +266,7 @@ CREATE TABLE `state` (
 
 LOCK TABLES `state` WRITE;
 /*!40000 ALTER TABLE `state` DISABLE KEYS */;
+INSERT INTO `state` VALUES (1,'Alabama','2020-01-31 18:29:47'),(2,'Alaska','2020-01-31 18:29:47'),(3,'Arizona','2020-01-31 18:29:47'),(4,'Arkansas','2020-01-31 18:29:47'),(5,'California','2020-01-31 18:29:47'),(6,'Colorado','2020-01-31 18:29:47'),(7,'Connectitcut','2020-01-31 18:29:47'),(8,'Delaware','2020-01-31 18:29:47'),(9,'Florida','2020-01-31 18:29:47'),(10,'Georgia','2020-01-31 18:29:47'),(11,'Hawaii','2020-01-31 18:29:47'),(12,'Idaho','2020-01-31 18:29:47'),(13,'Illinois','2020-01-31 18:29:47'),(14,'Indiana','2020-01-31 18:29:47'),(15,'Iowa','2020-01-31 18:29:47'),(16,'Kansas','2020-01-31 18:29:48'),(17,'Kentucky','2020-01-31 18:29:48'),(18,'Louisiana','2020-01-31 18:29:48'),(19,'Main','2020-01-31 18:29:48'),(20,'Maryland','2020-01-31 18:29:48'),(21,'Massachusetts','2020-01-31 18:29:48'),(22,'Michigan','2020-01-31 18:29:48'),(23,'Minnesota','2020-01-31 18:29:48'),(24,'Mississippi','2020-01-31 18:29:48'),(25,'Missouri','2020-01-31 18:29:48'),(26,'Montana','2020-01-31 18:29:48'),(27,'Nebraska','2020-01-31 18:29:48'),(28,'Nevada','2020-01-31 18:29:48'),(29,'New Hampshire','2020-01-31 18:29:48'),(30,'New Jersey','2020-01-31 18:29:48'),(31,'New Mexico','2020-01-31 18:29:48'),(32,'New York','2020-01-31 18:29:48'),(33,'North Carolina','2020-01-31 18:29:48'),(34,'North Dakota','2020-01-31 18:29:48'),(35,'Ohio','2020-01-31 18:29:48'),(36,'Oklahoma','2020-01-31 18:29:48'),(37,'Oregon','2020-01-31 18:29:49'),(38,'Pennsylvania','2020-01-31 18:29:49'),(39,'Rhode Island','2020-01-31 18:29:49'),(40,'South Carolina','2020-01-31 18:29:49'),(41,'South Dakota','2020-01-31 18:29:49'),(42,'Tennessee','2020-01-31 18:29:49'),(43,'Texas','2020-01-31 18:29:49'),(44,'Utah','2020-01-31 18:29:49'),(45,'Vermont','2020-01-31 18:29:49'),(46,'Virginia','2020-01-31 18:29:49'),(47,'Washington','2020-01-31 18:29:49'),(48,'West Virginia','2020-01-31 18:29:49'),(49,'Wisconsin','2020-01-31 18:29:49'),(50,'Wyoming','2020-01-31 18:29:49');
 /*!40000 ALTER TABLE `state` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -332,7 +336,7 @@ CREATE TABLE `zipcodes` (
   `zip` varchar(45) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`zipcode_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -341,6 +345,7 @@ CREATE TABLE `zipcodes` (
 
 LOCK TABLES `zipcodes` WRITE;
 /*!40000 ALTER TABLE `zipcodes` DISABLE KEYS */;
+INSERT INTO `zipcodes` VALUES (1,'20001','2020-01-31 18:43:51'),(2,'20002','2020-01-31 18:43:51'),(3,'20003','2020-01-31 18:43:51'),(4,'20004','2020-01-31 18:43:51'),(5,'20005','2020-01-31 18:43:51'),(6,'20006','2020-01-31 18:43:51'),(7,'20007','2020-01-31 18:43:51'),(8,'20008','2020-01-31 18:43:51'),(9,'20009','2020-01-31 18:43:51'),(10,'20010','2020-01-31 18:43:51'),(11,'20011','2020-01-31 18:43:51'),(12,'20012','2020-01-31 18:43:51'),(13,'20013','2020-01-31 18:43:51'),(14,'20014','2020-01-31 18:43:51'),(15,'20015','2020-01-31 18:43:52'),(16,'20016','2020-01-31 18:43:52'),(17,'20017','2020-01-31 18:43:52'),(18,'20018','2020-01-31 18:43:52'),(19,'20019','2020-01-31 18:43:52'),(20,'20020','2020-01-31 18:43:52'),(21,'20021','2020-01-31 18:43:52'),(22,'20022','2020-01-31 18:43:52'),(23,'20023','2020-01-31 18:43:52'),(24,'20024','2020-01-31 18:43:52'),(25,'20025','2020-01-31 18:43:52'),(26,'20026','2020-01-31 18:43:52'),(27,'20027','2020-01-31 18:43:52'),(28,'20028','2020-01-31 18:43:52'),(29,'20029','2020-01-31 18:43:52'),(30,'20030','2020-01-31 18:43:52'),(31,'20031','2020-01-31 18:43:52'),(32,'20032','2020-01-31 18:43:52'),(33,'20033','2020-01-31 18:43:52'),(34,'20034','2020-01-31 18:43:52'),(35,'20035','2020-01-31 18:43:52'),(36,'20036','2020-01-31 18:43:52'),(37,'20037','2020-01-31 18:43:52'),(38,'20038','2020-01-31 18:43:52'),(39,'20039','2020-01-31 18:43:52'),(40,'20040','2020-01-31 18:43:52'),(41,'20041','2020-01-31 18:43:53'),(42,'20042','2020-01-31 18:43:53'),(43,'20043','2020-01-31 18:43:53');
 /*!40000 ALTER TABLE `zipcodes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -353,4 +358,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-31 12:00:46
+-- Dump completed on 2020-01-31 13:51:41
